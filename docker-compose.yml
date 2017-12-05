@@ -2,7 +2,9 @@ version: '3'
 
 services:
   mosquitto-service:
-    build: .
+    build:
+        context: .
+        dockerfile: Dockerfile_source
     volumes:
       - ~/git/docker-mosquitto/:/opt/mosquitto
       - ~/git//docker-mosquitto/log:/var/log/mosquitto
