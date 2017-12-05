@@ -4,8 +4,8 @@
 
 Clone repo:
 
-`git clone https://github.com/trieb/docker-mosquitto.git`
-`cd docker-mosquitto`
+* `git clone https://github.com/trieb/docker-mosquitto.git`
+* `cd docker-mosquitto`
 
 #### Docker
 
@@ -30,7 +30,7 @@ Start service:
 
 ### Port mapping
 
-`tcp/1883  MQTT port`
-`tcp/8883  MQTT port SSL/TLS`
-`tcp/9001  websocket`
-`tcp/9883  websocket SSL/TLS`
+* `tcp/1883  MQTT port`
+* `tcp/8883  MQTT port SSL/TLS`
+* `tcp/9001  websocket`
+* `tcp/9883  websocket SSL/TLS`
