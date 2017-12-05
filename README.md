@@ -49,4 +49,6 @@ Try:
 
 and create an empty file: 
 
-`touch log/moquitto.log` 
+* `touch log/moquitto.log`
+* `sudo chmod 777 log/mosquitto.log` 
+
