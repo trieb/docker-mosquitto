@@ -35,14 +35,14 @@ RUN make
 RUN make install
 WORKDIR /
 
-# Create folder to hold all configuration e.g. mosquitto.passwd and mosquitto.acl
+# Create folder to hold all configuration
 RUN mkdir /opt/mosquitto
 
 RUN adduser --system --disabled-password --disabled-login mosquitto
 USER mosquitto
 
 # Copy config files to image
-COPY config/conf.d/ /opt/mosquitto/conf.d/
+# COPY config/conf.d/ /opt/mosquitto/conf.d/
 
 # The folder with the cetificates are mounted from host at 'run'
 
@@ -50,4 +50,4 @@ COPY config/conf.d/ /opt/mosquitto/conf.d/
 EXPOSE 1883 8883 9001 9883
 
 # Define
-CMD /usr/local/sbin/mosquitto -c /opt/mosquitto/conf.d/mosquitto.conf
+CMD /usr/local/sbin/mosquitto -c /opt/mosquitto/config/conf.d/mosquitto.conf

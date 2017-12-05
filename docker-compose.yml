@@ -4,9 +4,10 @@ services:
   mosquitto-service:
     build: .
     volumes:
-      - /opt/mosquitto:/opt/mosquitto
-      - /opt/mosquitto/logs:/var/log/mosquitto
-      - /opt/mosquitto/certs/trusted:/etc/mosquitto/certs
+      - ~/git/docker-mosquitto/:/opt/mosquitto
+      - ~/git//docker-mosquitto/log:/var/log/mosquitto
     ports:
+      - 1883:1883
       - 8883:8883
+      - 9001:9001
       - 9883:9883
