@@ -34,3 +34,19 @@ Start service:
 * `tcp/8883  MQTT port SSL/TLS`
 * `tcp/9001  websocket`
 * `tcp/9883  websocket SSL/TLS`
+
+## Problems 
+
+If you get: 
+
+`Error: Unable to open log file /var/log/mosquitto/mosquitto.log for writing.` 
+
+make sure that the files in the directory `log` are writable. 
+
+Try: 
+
+`sudo chwon -R $USER:$USER log/`
+
+and create an empty file: 
+
+`touch log/moquitto.log` 
